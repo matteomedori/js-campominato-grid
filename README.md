@@ -24,3 +24,23 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro ed 
     - per ogni elemento aggiungo un evento al click che
       - aggiunge se non c'è o toglie se c'è la classe new-bg che cambia il colore di background della cella
       - stampa in console il numero della cella
+
+## Bonus
+
+Aggiungere una select accanto al bottone di generazione, che fornisca una scelta tra tre diversi livelli di difficoltà:
+
+- con difficoltà 1 => 100 caselle, con un numero compreso tra 1 e 100, divise in 10 caselle per 10 righe;
+- con difficoltà 2 => 81 caselle, con un numero compreso tra 1 e 81, divise in 9 caselle per 9 righe;
+- con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
+
+- aggiungo nell'evento generato dal click su play nel caso in cui isPlaying è false una variabile che seleziona il valore della select nell'html
+- a seconda di questo valore:
+  - se è uguale a low
+    - metto il numero di iterazioni a 100
+    - le classi da aggiungere alla cella sono cell e low-difficult
+  - se è uguale a medium
+    - metto il numero di iterazioni a 81
+    - le classi da aggiungere alla cella sono cell e medium-difficult
+  - se è uguale a high
+    - metto il numero di iterazioni a 49
+    - le classi da aggiungere alla cella sono cell e high-difficult
