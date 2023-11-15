@@ -40,16 +40,18 @@ header button {
   padding: 3px 35px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: rgb(248, 239, 239);
-  cursor: pointer;
 }
 
 header select {
   padding: 3px 35px 3px 0px;
   border-radius: 5px;
+  text-align: left;
+}
+
+header button,
+header select {
   background-color: rgb(248, 239, 239);
   cursor: pointer;
-  text-align: left;
 }
 
 header .left-header {
@@ -60,6 +62,7 @@ header .left-header {
 header img {
   width: 70px;
 }
+
 /* 
 ---------
 MAIN
@@ -72,10 +75,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-main h2 {
-  text-align: center;
 }
 
 main .board {
