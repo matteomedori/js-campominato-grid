@@ -25,11 +25,31 @@ let isPlaying = false;
 
 playButton.addEventListener("click", function () {
   if (!isPlaying) {
-    //ciclo con 100 iterazioni
-    for (let i = 0; i < 100; i++) {
-      const newElem = myCreateElement("div", ["cell"], i + 1);
+    const selectValue = document.querySelector("select").value;
+    let numeroIterazioni;
+    let classes = [];
+    //bassa difficoltà
+    if (selectValue === "low") {
+      numeroIterazioni = 100;
+      classes = ["cell", "low-difficult"];
+    }
+    //media difficoltà
+    else if (selectValue === "medium") {
+      numeroIterazioni = 81;
+      classes = ["cell", "medium-difficult"];
+    }
+    //alta difficoltà
+    else if (selectValue === "high") {
+      numeroIterazioni = 49;
+      classes = ["cell", "high-difficult"];
+    }
+
+    //ciclo che itera tante volte quanto il numero di celle necesarrie
+    for (let i = 0; i < numeroIterazioni; i++) {
+      const newElem = myCreateElement("div", classes, i + 1);
       board.append(newElem);
     }
+
     //ho cliccato su play
     isPlaying = true;
 

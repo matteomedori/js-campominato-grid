@@ -44,6 +44,14 @@ header button {
   cursor: pointer;
 }
 
+header select {
+  padding: 3px 35px 3px 0px;
+  border-radius: 5px;
+  background-color: rgb(248, 239, 239);
+  cursor: pointer;
+  text-align: left;
+}
+
 header .left-header {
   display: flex;
   align-items: center;
@@ -79,12 +87,27 @@ main .board {
 }
 
 main .cell {
-  width: calc(100% / 10);
-  height: calc(100% / 10);
   border: 1px solid black;
   cursor: pointer;
-  line-height: 50px;
   text-align: center;
+}
+
+.low-difficult {
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  line-height: 50px;
+}
+
+.medium-difficult {
+  width: calc(100% / 9);
+  height: calc(100% / 9);
+  line-height: 55.55px;
+}
+
+.high-difficult {
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  line-height: 71.43px;
 }
 
 .new-bg {
